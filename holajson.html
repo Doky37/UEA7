@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes del cuerpo </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>JSON Cuerpo en movimiento </h1>
+    <p>Dice que: </p>
+    <p>Se </p>
+    <div>  <span id="accion"> </span></div>
+<p>el/la</p>
+    <div> <span id="parte"></span></div>
+    <p>que esta del lado</p>
+    <div> <span id="lado"></span></div>
+
+  <!--  <script src="hola.js"></script> -->
+    
+    <script>
+        fetch('hola.json')
+        .then(response => response.json ())
+        .then(json => {
+            
+            document.getElementById("accion").innerHTML=json.acciones[0];
+        console.log(json);
+        })
+    </script>
+
+    <script>
+        fetch('hola.json')
+        .then(response => response.json ())
+        .then(json => {
+            
+            document.getElementById("parte").innerHTML=json.partes[0];
+        console.log(json);
+        })
+    </script>
+
+    <script>
+        fetch('hola.json')
+        .then(response => response.json ())
+        .then(json => {
+            
+            document.getElementById("lado").innerHTML=json.lado[0];
+        console.log(json);
+        })
+    </script>
+    
+</body>
+</html>
